@@ -11,7 +11,7 @@ In dit project is het de bedoeling dat we een website maken voor Happy Italy, en
 
 ###### Could Have
 - Autofill adresgegevens, als je postcode invult.
-- Order "tracking" nummer, pagina.
+- Order "tracking" pagina.
 
 
-more coming soon.
+![GitHub Logo](https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/99b7c778175783.5cb384d409c7a.png)
