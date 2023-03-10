@@ -43,10 +43,13 @@ body {
     color: white;
 }
 .btn {
-    width: 100px;
+    width: 120px;
+    height: 40px;
     text-align: center;
     transition: background-color 0.5s;
     border-radius: 1vw;
+    color: white;
+    text-decoration: none;
 }
 .btn:hover {
     background-color: red;
