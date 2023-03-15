@@ -1,10 +1,14 @@
 *{
     margin: 0;
     padding:0;
+    overflow: hidden;
 }
 
 .nav { grid-area: header; }
-.main { grid-area: main; }
+.main {
+     grid-area: main; 
+    margin-top: -9.5vh;    
+}
 .footer { grid-area: footer; }
 
 .grid-container {
@@ -13,6 +17,7 @@
       'header header header header header header'
       'main main main main main main'
       'footer footer footer footer footer footer';
+    grid-template-rows: 15vh 70vh 15vh;
     gap: 10px;
 }
 .grid-container > div {
@@ -28,11 +33,14 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
+    height: 45%;
+
 }
 .logo {
     width:140px;
-    height: 75px; 
+    height: 80px;
     padding: 20px;
+    margin-bottom: -2.5vh;
 }
 .button {
     display: flex;
@@ -55,18 +63,17 @@ body {
     background-color: red;
 }
 
-.location { grid-area: location; }
-.job { grid-area: job; }
-.jobimg { grid-area: jobimg; }
 .slider { grid-area: slider; }
-.text { grid-area: text; }
+.info { grid-area: info; }
+.ads { grid-area: ads; }
 
 
 .main {
     display: grid;
     grid-template-areas:
-      'location location job job slider slider slider'
-      'location location jobimg jobimg text text text';
+      'slider slider slider slider'
+      'info info info ads';
+    grid-template-rows: 50vh auto;
     gap: 10px;
 }
 .main div {
@@ -77,7 +84,7 @@ body {
 .slider {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 100%;
     overflow: hidden;
 }
 .slide {
