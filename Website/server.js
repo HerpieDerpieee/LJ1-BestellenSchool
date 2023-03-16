@@ -201,4 +201,5 @@ function berekenTotaal(socket, userIndex){
     }
     priceString += totalPrice.toFixed(2);
     return priceString;
+    //sussy
 }
