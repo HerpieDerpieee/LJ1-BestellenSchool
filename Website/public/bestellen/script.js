@@ -66,3 +66,11 @@ document.getElementById("bbq-C-v").addEventListener("click", () => {sweetAlert("
 function changeValue(html, int){
   socket.emit("change", html, int)
 }
+
+
+document.getElementById("afrekenen").addEventListener("click", function(){
+  if (document.getElementById("price").innerHTML == "Total Price: €0.00" ){return;}
+  else{
+    window.location.href = "../betalen/";
+  }
+})
