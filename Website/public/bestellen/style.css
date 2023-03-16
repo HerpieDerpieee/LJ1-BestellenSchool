@@ -48,16 +48,16 @@
 
 .nav {
   background-image: url("../img/headerBG.png");
-  position: sticky;
-  top:0px;
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
   height: 45%;
+  padding-top: 20px;
+
 }
 .logo {
   width:140px;
-  height: 75px; 
+  height: 80px;
   padding: 20px;
   margin-bottom: -2.5vh;
 }
@@ -70,9 +70,9 @@
   color: white;
 }
 .btn {
+  display:flex;
   width: 120px;
   height: 40px;
-  display: flex;
   justify-content: center;
   align-items: center;
   transition: background-color 0.5s;
