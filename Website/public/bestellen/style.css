@@ -228,3 +228,7 @@
 html {
   overflow: hidden;
 }
+
+#inv {
+  opacity: 0;
+}

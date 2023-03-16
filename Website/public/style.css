@@ -141,6 +141,7 @@ body {
 .info {
     width: auto;
     display: flex;
+    justify-content: space-around;
     gap: 10px;
     margin-left: 5px;
 }
@@ -153,6 +154,10 @@ body {
     width: 20%;
     border: 1px solid black;
     text-align: center;
+}
+.ads {
+    display: flex;
+    justify-content: space-between;
 }
 #ad1 {
     border: 1px solid black;    
