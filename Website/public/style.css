@@ -51,9 +51,11 @@ body {
     color: white;
 }
 .btn {
+    display:flex;
     width: 120px;
     height: 40px;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     transition: background-color 0.5s;
     border-radius: 1vw;
     color: white;

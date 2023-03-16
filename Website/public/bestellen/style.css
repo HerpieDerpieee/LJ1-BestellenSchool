@@ -45,7 +45,7 @@
 }
 
 .nav {
-  background-image: url("./img/headerBG.png");
+  background-image: url("../img/headerBG.png");
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
@@ -55,6 +55,7 @@
   width:140px;
   height: 75px; 
   padding: 20px;
+  margin-bottom: -2.5vh;
 }
 .button {
   display: flex;

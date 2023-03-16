@@ -59,6 +59,7 @@ io.on("connection", socket => {
 
     });
     socket.on("add", (productID) => {
+        //cart
         if(productID > names.length - 1 || productID <= 0 || typeof(productID) != "number"){return;}
         let userIndex = getIndex(socket);
 
@@ -67,10 +68,14 @@ io.on("connection", socket => {
         let htmlString = getHTML(socket, userIndex);
         socket.emit("returnCart", htmlString);
 
+        //price
+        priceString  = berekenTotaal(socket, userIndex);
+        socket.emit("returnPrice", priceString);
         console.log(carts[userIndex][1])
     });
 
     socket.on("change", (html, int) => {
+        //cart
         if (typeof(int) != "number"){return;}
         let userIndex = getIndex(socket);
 
@@ -93,6 +98,11 @@ io.on("connection", socket => {
         let htmlString = getHTML(socket, userIndex);
         socket.emit("returnCart", htmlString);
 
+
+
+        //price
+        priceString  = berekenTotaal(socket, userIndex);
+        socket.emit("returnPrice", priceString);
         console.log(carts[userIndex][1])
     })
 });
@@ -170,4 +180,25 @@ function getProductIndex(socket, userIndex, id){
     }
     return index;
     
+}
+
+function berekenTotaal(socket, userIndex){
+    let priceString = "Total Price: €";
+    let totalPrice = 0;
+
+
+    ["uuid" [[1,1],[2,1]]]
+
+    for (let i = 0; i < carts[userIndex][1].length; i++){
+        let product = carts[userIndex][1][i][0];
+        for (let j = 0; j < names.length; j++) {
+            if (j == product) {
+                let amount = carts[userIndex][1][i][1];
+                totalPrice += names[j][2] * amount;
+                break;
+            }
+        }
+    }
+    priceString += totalPrice.toFixed(2);
+    return priceString;
 }
