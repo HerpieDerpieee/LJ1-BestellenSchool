@@ -29,16 +29,6 @@ function sweetAlert(titel, iconSrc, html1, html2, price, pid){
 
   }).then((result) => {
     if (result.isConfirmed) {
-      Swal.fire({
-        customClass: 'confirmTitle',
-        position: 'top',
-        icon: 'success',
-        title: 'Added to cart',
-        showConfirmButton: false,
-        timer: 850,
-        width: "300px",
-      })
-
       socket.emit("add", pid);
     }
   })
@@ -68,7 +58,7 @@ document.getElementById("bbq-M").addEventListener("click", () => {sweetAlert("Pi
 document.getElementById("bufala").addEventListener("click", () => {sweetAlert("Pizza Bufala Bruschetta", "", "Een geweldige pizza met", "Buffelmozzarella, gemarineerde tomatenblokjes, rucola, pesto en Parmezaanse kaas", 13.95, 21);})
 document.getElementById("margarita-v").addEventListener("click", () => {sweetAlert("Pizza Vegan Margherita", "", "Een geweldige pizza met", "Tomatensaus, vegan pizzakaas en basilicum", 7.95, 22);})
 document.getElementById("funghi-v").addEventListener("click", () => {sweetAlert("Pizza Vegan Funghi", "", "Een geweldige pizza met", "Tomatensaus, vegan mozzarella, champignons en knoflookolie", 10.95, 23);})
-document.getElementById("donor-v").addEventListener("click", () => {sweetAlert("Pizza Vegan Döner", "", "Een geweldige pizza met", "Tomatensaus, vegan pizzakaas, vegan kebab, rode ui en vegan knoflooksaus", 14.45, 24);})
+document.getElementById("doner-v").addEventListener("click", () => {sweetAlert("Pizza Vegan Döner", "", "Een geweldige pizza met", "Tomatensaus, vegan pizzakaas, vegan kebab, rode ui en vegan knoflooksaus", 14.45, 24);})
 document.getElementById("pollo-p-v").addEventListener("click", () => {sweetAlert("Pizza Vegan Pollo Pesto", "", "Een geweldige pizza met", "Tomatensaus, vegan mozzarella, vegan kipreepjes, cherrytomaten, champignons, zoete ui, gegrilde paprika en vega pesto", 13.95, 25);})
 document.getElementById("bbq-C-v").addEventListener("click", () => {sweetAlert("Pizza Vegan BBQ Chicken", "", "Een geweldige pizza met", "Tomatensaus, vegan pizzakaas, vega kipreepjes, rode pepers, rode ui en vegan barbecuesaus", 13.49, 26);})
 
