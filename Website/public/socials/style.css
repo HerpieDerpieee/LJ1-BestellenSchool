@@ -1,22 +1,28 @@
-*{
+* {
     margin: 0;
-    padding:0;
+    padding: 0;
     overflow: hidden;
 }
 
-.nav { grid-area: header; }
-.main {
-    grid-area: main; 
-    margin-top: -9.5vh;    
+header {
+    grid-area: header;
 }
-.footer { grid-area: footer; }
+
+.main {
+    grid-area: main;
+    margin-top: -9.5vh;
+}
+
+.footer {
+    grid-area: footer;
+}
 
 .grid-container {
     display: grid;
     grid-template-areas:
-      'header header header header header header'
-      'main main main main main main'
-      'footer footer footer footer footer footer';
+        'header header header header header header'
+        'main main main main main main'
+        'footer footer footer footer footer footer';
     grid-template-rows: 15vh 70vh 15vh;
     gap: 10px;
 }
@@ -30,12 +36,8 @@
     padding-top: 20px;
 
 }
-.logo {
-    width:140px;
-    height: 80px;
-    padding: 20px;
-    margin-bottom: -2.5vh;
-}
+
+
 .button {
     display: flex;
     justify-content: right;
@@ -44,8 +46,9 @@
     font-size: 22px;
     color: white;
 }
+
 .btn {
-    display:flex;
+    display: flex;
     width: 120px;
     height: 40px;
     justify-content: center;
@@ -55,6 +58,7 @@
     color: white;
     text-decoration: none;
 }
+
 .btn:hover {
     background-color: red;
 }
