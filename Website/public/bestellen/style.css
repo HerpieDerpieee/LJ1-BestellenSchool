@@ -30,11 +30,14 @@
 
 
 header {
-  grid-area: header !important;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .main {
   grid-area: main;
+  margin-top: 2vh;
 }
 
 .footer {
@@ -44,16 +47,9 @@ header {
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header header header header header header'
     'main main main main main main'
     'footer footer footer footer footer footer';
-  grid-template-rows: 15vh 70vh 15vh;
-  gap: 10px;
-  height: 105vh !important;
-}
-
-.grid-container>div {
-  padding: 20px 0;
+  grid-template-rows: auto 15vh;
 }
 
 .nav {
