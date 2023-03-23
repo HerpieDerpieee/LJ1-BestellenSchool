@@ -3,11 +3,11 @@
     padding: 0;
     overflow-x: hidden;
 }
-
-:root {
-}
-
-
+body {
+    background-image: url("../img/mainBG.jpg");
+    background-size: cover;
+    background-position: center;
+  }
 header {
     position: sticky;
     top: 0;
@@ -240,7 +240,7 @@ header {
     }
     .infoContainer {
         width: 95vw;
-        margin-left: 2.5vw;
+        margin-left: 1.25vw;
     }
 
     .infoContainer>* {

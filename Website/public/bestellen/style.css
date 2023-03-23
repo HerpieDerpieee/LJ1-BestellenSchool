@@ -47,9 +47,10 @@ header {
 .grid-container {
   display: grid;
   grid-template-areas:
-    'main main main main main main'
-    'footer footer footer footer footer footer';
+    'main'
+    'footer';
   grid-template-rows: auto 15vh;
+  min-height: 88vh;
 }
 
 .nav {
@@ -107,10 +108,10 @@ header {
 
 #cart {
   width: 100%;
-  min-height: 50vh;
-  max-height: 50vh;
+  min-height: 58vh;
+  max-height: 58vh;
   height: fit-content !important;
-  background-color: gray;
+  background: url("../img/orderBG.png");
   overflow-y: auto !important;
 }
 
@@ -141,13 +142,12 @@ header {
   border-radius: 10%;
 }
 
-/*MOBILE CSS ----------------------------------------------------------------------*/
-@media (max-width: 1200px) {
-  * {
-    margin: 0;
-    padding: 0;
-  }
+body {
+  background-image: url("../img/mainBG.jpg");
+  background-size: cover;
+  background-position: center;
 }
+
 
 .buttons {
   display: flex;
@@ -166,10 +166,13 @@ header {
 .buttons button {
   width: 15vw !important;
   height: 50px !important;
+  background: linear-gradient(0deg, rgb(255,10,10), rgb(255,30,30));
+  border: solid rgb(125, 0, 0);
+  border-radius: 10px;
 }
 
 .price {
-  background-color: rgba(50, 50, 50, 0.3);
+  background-color: rgb(90, 90, 90);
   width: 100%;
   height: 10vh;
 }
@@ -182,4 +185,19 @@ html {
 
 #inv {
   opacity: 0;
+}
+
+
+/* RESPONSIVE SHIT */
+
+@media (max-width: 527px){
+  .buttons button {
+    height: 5vh !important;
+    font-size: 1.2vh;
+  }
+
+  #cart {
+    min-height: 47vh;
+    max-height: 47vh;
+  }
 }
