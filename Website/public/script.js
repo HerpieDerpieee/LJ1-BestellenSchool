@@ -4,7 +4,7 @@ var slideInterval = setInterval(nextSlide, 3000);
 let slidesRoot = document.getElementById("slider");
 var r = document.querySelector(':root');
 let img = document.getElementById("imgSlider");
-kaasblokje();
+setTimeout(function() { kaasblokje(); }, 500);
 
 function nextSlide() {
     slides[currentSlide].className = 'slide';

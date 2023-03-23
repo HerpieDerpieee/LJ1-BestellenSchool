@@ -70,3 +70,9 @@
     text-align: center;
     background-color: lightgray;
   }
+
+body {
+  background-image: url("../img/mainBG.jpg");
+  background-size: cover;
+  background-position: center;
+}
