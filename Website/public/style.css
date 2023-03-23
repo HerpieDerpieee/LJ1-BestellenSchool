@@ -4,6 +4,8 @@
     overflow-x: hidden;
 }
 
+:root {
+}
 
 
 header {
@@ -26,6 +28,7 @@ header {
         'main main main main main main'
         'footer footer footer footer footer footer';
     grid-template-rows: auto 15vh;
+    min-height: 88vh;
 }
 
 
@@ -68,8 +71,10 @@ header {
     background-color: red;
 }
 
-.slider {
-    grid-area: slider;
+/* .slider {
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 3s;
 }
 
 .info {
@@ -86,21 +91,18 @@ header {
 
 .ons {
     grid-area: ons;
-}
+} */
 
 .main {
-    display: grid;
-    grid-template-areas:
-        'slider slider slider slider slider'
-        'info info info info info';
-    grid-template-rows: 50vh auto;
+    display: flex;
+    flex-direction: column;
     gap: 10px;
 }
 
 .slider {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: var(--slider-height);
     overflow: hidden;
 }
 
@@ -112,9 +114,10 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: fit-content;
     margin-top: 0vh;
     opacity: 0;
+    /* max-height: 260px; */
     transition: opacity 1s ease-in-out;
 }
 
@@ -127,7 +130,7 @@ header {
     overflow: hidden;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit:scale-down;
 }
 
 @keyframes imageSlider {
@@ -181,7 +184,6 @@ header {
     display: flex;
     justify-content: space-around;
     gap: 10px;
-    margin-left: 5px;
 }
 
 .history {
@@ -204,22 +206,44 @@ header {
 
 #ad1 {
     border: 1px solid black;
-    width: 30%;
+    width: 33%;
     height: 99%;
 }
 
 #ad2 {
     border: 1px solid black;
-    width: 35%;
+    width: 33%;
     height: 99%;
 }
 
 #ad3 {
     border: 1px solid black;
-    width: 35%;
+    width: 33%;
     height: 99%;
 }
 
 .footer {
     background-image: url(./img/headerBG.png);
+}
+
+.infoContainer {
+    width: 50vw;
+}
+.infoContainer>* {
+    width: 100%;
+    height: 100%;
+}
+
+@media(max-width: 992px) {
+    .info {
+        display: block;
+    }
+    .infoContainer {
+        width: 95vw;
+        margin-left: 2.5vw;
+    }
+
+    .infoContainer>* {
+        width: 100%;
+    }
 }
