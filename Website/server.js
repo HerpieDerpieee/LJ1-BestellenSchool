@@ -203,3 +203,6 @@ function berekenTotaal(socket, userIndex){
     return priceString;
     //sussy
 }
+
+
+module.exports = app;
